@@ -1,4 +1,5 @@
 import com.divine.main.*;
+import com.mysql.cj.x.protobuf.MysqlxCrud;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -104,7 +105,7 @@ public class Main {
         task1.setName("Заказ1");
         Task task2 = new Task();
         task2.setName("Заказ2");
-        Set<Task> orders = new HashSet<>();
+        List<Task> orders = new ArrayList<>();
         orders.add(task1);
         orders.add(task2);
         customer2.setTasks(orders);

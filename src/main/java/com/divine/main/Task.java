@@ -1,6 +1,7 @@
 package com.divine.main;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -10,7 +11,7 @@ public class Task {
     private int id;
     private String name;
     @ManyToMany(mappedBy = "tasks")
-    private Set<Customer> customers;
+    private List<Customer> customers;
 
     public int getId() {
         return id;

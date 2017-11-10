@@ -1,6 +1,7 @@
 package com.divine.main;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -14,7 +15,7 @@ public class Customer {
     private Set<Staff> staffs;
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "customer_order", joinColumns = @JoinColumn(name = "customer_id"), inverseJoinColumns = @JoinColumn(name = "task_id"))
-    private Set<Task> tasks;
+    private List<Task> tasks;
 
     public int getCustomer_id() {
         return customer_id;
@@ -40,11 +41,11 @@ public class Customer {
         this.staffs = staff;
     }
 
-    public Set<Task> getTasks() {
+    public List<Task> getTasks() {
         return tasks;
     }
 
-    public void setTasks(Set<Task> tasks) {
+    public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
     }
 }
