@@ -3,14 +3,14 @@
 
     <persistence-unit name="Hibernate">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <!--<class>com.divine.main.User</class>
+        <class>com.divine.main.User</class>
         <class>com.divine.main.Company</class>
         <class>com.divine.main.Departament</class>
         <class>com.divine.main.Headquoter</class>
         <class>com.divine.main.School</class>
         <class>com.divine.main.Children</class>
         <class>com.divine.main.Owner</class>
-        <class>com.divine.main.Car</class>-->
+        <class>com.divine.main.Car</class>
         <class>com.divine.main.Customer</class>
         <class>com.divine.main.Task</class>
         <class>com.divine.main.Staff</class>
